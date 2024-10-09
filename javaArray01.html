@@ -44,19 +44,41 @@
             padding: 10px;
             border-radius: 5px;
             overflow-x: auto;
-            /* font-size: 16px; */
+            /* font-size: 20px; */
+            /* font-weight: bold; */
         }
+        
 
         .section {
             margin-top: 50px;
+            width: 100vw;
+        }
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: lightgray; 
+            color: black;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .back-to-top:hover {
+            background-color: lightslategray; 
+            text-decoration: none;
         }
     </style>
 </head>
 
 <body>
+    <a name="top"></a>
 
-    <h2>Java Programs - Arrays - ArrayList</h2>
+    <h2 id="main">Java Programs - Arrays - ArrayList</h2>
     <ul>
+        
         <li><a href="#program1">_01_static_Array.java</a></li>
         <li><a href="#program2">_02_Dynamic_Array.java</a></li>
         <li><a href="#program3">_03_Sum_of_even_index_array.java</a></li>
@@ -168,6 +190,10 @@ public class _03_Sum_of_even_index_array {
         </pre>
     </div>
 
+
+   
+   
+
     <div id="program4" class="section">
         <h3>_04_Reverse_array_sum_of_even_index_value.java</h3>
         <pre>
@@ -195,6 +221,9 @@ public class _04_Reverse_array_sum_of_even_index_value {
 }
         </pre>
     </div>
+
+
+    <a href="#top" class="back-to-top">Back to Top</a>
 
     <div id="program5" class="section">
         <h3>_05_Sort_array.java</h3>
@@ -1825,7 +1854,7 @@ public class _18_Union_and_Intersection {
         </pre>
     </div>
 
-
+ 
 
     <footer style="background-color: lightgrey; color: black; text-align: center; padding: 10px; font-size: 5px;">
         <p>Follow me on <a href="https://github.com/yuke001" target="_blank" style="color: #0077cc;">GitHub</a></p>
