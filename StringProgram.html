@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java String Program</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        h2,
+        h3 {
+            color: #333;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        li {
+            margin: 10px 0;
+        }
+
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        pre {
+            background-color: #e8e8e8;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        .section {
+            margin-top: 50px;
+            width: 100vw;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: lightgray; 
+            color: black;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .back-to-top:hover {
+            background-color: lightslategray; 
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <a name="top"></a>
+    <a href="#top" class="back-to-top">Back to Top</a>
+    <p> click here : <a href="javaArray.html"  style="color: red;">Array Programs</a></p>
+    <h2>String Programs List</h2>
+    <ul>
+        <li><a href="#program1">01. Reverse word</a></li>
+        <li><a href="#program2">02. Check if a word is a palindrome</a></li>
+        <li><a href="#program3">03. Check if a word is a palindrome without using equals method</a></li>
+        <li><a href="#program4">04. Demonstrate replace() and replaceAll() methods</a></li>
+        <li><a href="#program5">05. Reverse a word without using charAt() method</a></li>
+        <li><a href="#program6">06. Reverse a sentence</a></li>
+        <li><a href="#program7">07. Reverse each word in a sentence</a></li>
+        <li><a href="#program8">08. Count the number of characters in each word of a sentence.</a></li>
+        <li><a href="#program9">09. Find all palindromic words in a sentence</a></li>
+        <li><a href="#program10">10. Convert each character to the next ASCII value and add 4 to characters in another
+                string</a></li>
+        <li><a href="#program11">11. Check if a given string is a palindrome (ignoring special characters)</a></li>
+        <li><a href="#program12">12. Convert the case of each letter in a string (uppercase to lowercase and vice
+                versa)</a></li>
+        <li><a href="#program13">13. Find the frequency of each character in a string</a></li>
+        <li><a href="#program14">14. Find the frequency of each character in a character array</a></li>
+        <li><a href="#program15">15. Find the frequency of uppercase letters in a string</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </ul>
+
+    <div id="program1" class="section">
+        <h3>01. Reverse a word</h3>
+        <pre>
+package String01;
+
+public class _01_Reverse_word {
+    public static void main(String[] args) {
+        String s = "java";
+        String rev = "";
+        for (int i = s.length() - 1; i >= 0; i--) {
+            rev += s.charAt(i);
+        }
+        System.out.println(rev);
+    }
+}
+
+// Output: avaj
+        </pre>
+    </div>
+
+    <div id="program2" class="section">
+        <h3>02. Check if a word is a palindrome</h3>
+        <pre>
+    package String01;
+    
+    public class _02_Palindrome {
+        public static void main(String[] args) {
+            String s = "level";
+            String rev = "";
+    
+            for (int i = s.length() - 1; i >= 0; i--) {
+                rev += s.charAt(i);
+            }
+    
+            if (rev.equalsIgnoreCase(s)) {
+                System.out.println("palindrome");
+            } else {
+                System.out.println("not a palindrome");
+            }
+        }
+    
+    }
+    
+    // Output:
+    // palindrome
+        </pre>
+    </div>
+
+    <div id="program3" class="section">
+        <h3>03. Check if a word is a palindrome without using equals method</h3>
+        <pre>
+    package String01;
+    
+    public class _03_Palindrome_without_equals_method {
+    
+        static boolean pal(String s) {
+            int si = 0;
+            int ei = s.length() - 1;
+    
+            while (si < ei) {
+                if (s.charAt(si) != s.charAt(ei)) {
+                    return false;
+                }
+                si++;
+                ei--;
+            }
+            return true;
+        }
+    
+        public static void main(String[] args) {
+    
+            String s = "tenet";
+    
+            s = s.toLowerCase();
+    
+            if (pal(s)) {
+                System.out.println("palindrome");
+            } else {
+                System.out.println("Not a Palindrome");
+            }
+        }
+    
+    }
+    
+    // Output: palindrome
+        </pre>
+    </div>
+
+    <div id="program4" class="section">
+        <h3>04. Demonstrate replace() and replaceAll() methods</h3>
+        <pre>
+    package String01;
+    
+    public class _04_Replace_and_ReplaceAll_methods {
+    
+        public static void main(String[] args) {
+            // replace old char to new char
+            String s = "Watch the Wall".replace('W', 'C');
+            System.out.println(s);
+    
+            // remove the extra space in the sentence
+            String s1 = "   hello java   hello    world   ".replaceAll(" +", " ");
+            System.out.println(s1);
+    
+            // remove the special character and numbers
+            String s2 = "#P12rO34!gR@Amm78iNg".replaceAll("[@#!0-9]", "");
+            System.out.println(s2);
+    
+            // i/p : #Move#Hast#toFirst o/p : ###MoveHashtoFirst
+            String s3 = "#Move#Hast#toFirst";
+            String s4 = s3.replaceAll("[^#]", "");
+            String s5 = s3.replaceAll("[^A-za-z]", "");
+            System.out.println(s4 + s5);
+    
+            // Check the given String is palindrome or not - i/p : "123Le23!3V$E89l23" o/p - level
+            String str = "123Le23!3V$E89l23".replaceAll("[^A-za-z]", "");
+            String rev = "";
+    
+            for (int i = str.length() - 1; i >= 0; i--) {
+                rev += str.charAt(i);
+            }
+            if (rev.equalsIgnoreCase(str))
+                System.out.println("palindrome :" + str.toLowerCase());
+            else
+                System.out.println("not a palindrome");
+        }
+    }
+    
+    // Output:
+    // Catch the Call
+    // hello java hello world
+    // PrOgrammNg
+    // ###MoveHashtoFirst
+    // palindrome : level
+        </pre>
+    </div>
+
+    <div id="program5" class="section">
+        <h3>05. Reverse a word without using charAt() method</h3>
+        <pre>
+    package String01;
+    
+    public class _05_Reverse_word_Without_using_charAt_method {
+    
+        public static void main(String[] args) {
+    
+            String s = "hello";
+            char[] ch = s.toCharArray();
+    
+            for (int i = ch.length - 1; i >= 0; i--) {
+                System.out.print(ch[i]);
+            }
+        }
+    }
+    
+    // Output:
+    // olleh
+        </pre>
+    </div>
+
+    <div id="program6" class="section">
+        <h3>06. Reverse a sentence</h3>
+        <pre>
+    package String01;
+    
+    public class _06_Reverse_sentence {
+    
+        public static void main(String[] args) {
+    
+            String s = "hi how are you";
+    
+            String[] s1 = s.split(" ");
+    
+            for (int i = s1.length - 1; i >= 0; i--) {
+                System.out.print(s1[i] + " ");
+            }
+        }
+    }
+    
+    // Output:
+    // you are how hi 
+        </pre>
+    </div>
+    <div id="program7" class="section">
+        <h3>07. Reverse each word in a sentence</h3>
+        <pre>
+    package String01;
+    
+    public class _07_Reverse_each_words_in_sentence {
+    
+        public static void main(String[] args) {
+    
+            String s = "hi how are you";
+    
+            String[] s1 = s.split(" ");
+    
+            for (int i = 0; i < s1.length; i++) {
+                rev(s1[i]);
+            }
+        }
+    
+        static void rev(String s) {
+            String rev = "";
+            for (int i = s.length() - 1; i >= 0; i--) {
+                rev += s.charAt(i);
+            }
+            System.out.print(rev + " ");
+        }
+    }
+    
+    // Output:
+    // ih woh era uoy 
+        </pre>
+    </div>
+
+    <div id="program8" class="section">
+        <h3>08. Count the number of characters in each word of a sentence.</h3>
+        <pre>
+    package String01;
+    
+    public class _08_count_each_words_in_sentence {
+        public static void main(String[] args) {
+            String s = "hi how are u";
+    
+            String[] s1 = s.split(" ");
+    
+            for (int i = 0; i < s1.length; i++) {
+                count(s1[i]);
+            }
+        }
+    
+        static void count(String s) {
+            int count = 0;
+            for (int i = 0; i < s.length(); i++) {
+                count++;
+            }
+            System.out.print(count + " ");
+        }
+    }
+// Output:
+// 2 3 3 1 
+        </pre>
+    </div>
+
+
+
+    <div id="program9" class="section">
+        <h3>9. Find all palindromic words in a sentence</h3>
+        <pre>
+    package String01;
+    
+    public class _09_Malayalam {
+    
+        public static void main(String[] args) {
+    
+            String s = "my mom said to me learn malayalam but im from katak place it is in gadag place";
+    
+            String[] s1 = s.split(" ");
+    
+            for (int i = 0; i < s1.length; i++) {
+                pal(s1[i]);
+            }
+        }
+    
+        static void pal(String s) {
+            String rev = "";
+            for (int i = s.length() - 1; i >= 0; i--) {
+                rev += s.charAt(i);
+            }
+            if (rev.equalsIgnoreCase(s)) {
+                System.out.print(s + " ");
+            }
+        }
+    }
+
+    // Output
+    // mom malayalam katak gadag 
+        </pre>
+    </div>
+
+    <div id="program10" class="section">
+        <h3>10. Convert each character to the next ASCII value and add 4 to characters in another string</h3>
+        <pre>
+    package String01;
+    
+    public class _10_ASCII_Conversion {
+    
+        public static void main(String[] args) {
+            String s = "adjcn";
+    
+            char[] ch = s.toCharArray();
+            for (int i = s.length() - 1; i >= 0; i--) {
+                char ch1 = (char) (ch[i] + 1);
+                System.out.print(ch1);
+            }
+    
+            System.out.println();
+    
+            String s1 = "hello";
+            char[] ch1 = s1.toCharArray();
+    
+            for (int i = 0; i < s1.length(); i++) {
+                char ch3 = (char) (ch1[i] + 4);
+                System.out.print(ch3);
+            }
+    
+        }
+    
+    }
+    // Output: 
+    // odkeb
+    // lipps
+        </pre>
+    </div>
+
+    <div id="program11" class="section">
+        <h3>11. Check if a string is a palindrome (ignoring special characters)</h3>
+        <pre>
+    package String01;
+    
+    public class _11_palindrome {
+    
+        static boolean pal(String s) {
+            int si = 0;
+            int ei = s.length() - 1;
+            while (si < ei) {
+                if (s.charAt(si) != s.charAt(ei)) {
+                    return false;
+                }
+                si++;
+                ei--;
+            }
+            return true;
+        }
+    
+        public static void main(String[] args) {
+
+            String s1 = "@123LevE#13l#!";
+    
+            String s2 = s1.replaceAll("[^A-za-z]", "");
+    
+            String s3 = s2.toLowerCase();
+    
+            boolean res = pal(s3);
+    
+            if (res)
+                System.out.println(s3 + " is palindrome");
+            else
+                System.out.println(s3 + " is not a palindrome");
+    
+        }
+    
+    }
+    // Output: 
+    // level is palindrome
+        </pre>
+    </div>
+
+    <div id="program12" class="section">
+        <h3>12. Convert the case of each letter in a string (uppercase to lowercase and vice versa)</h3>
+        <pre>
+    package String01;
+    
+    public class _12_JaVa {
+    
+        public static void main(String[] args) {
+    
+            String s = "JaVa";
+    
+            for (int i = 0; i < s.length(); i++) {
+                char ch = s.charAt(i);
+    
+                if (ch >= 'A' && ch <= 'Z') {
+                    System.out.print((char) (ch + 32));
+                } else if (ch >= 'a' && ch <= 'z') {
+                    System.out.print((char) (ch - 32));
+                }
+    
+            }
+    
+        }
+    
+    }
+    // Output: 
+    // jAvA
+        </pre>
+    </div>
+
+
+    <div id="program13" class="section">
+        <h3>13. Find the frequency of each character in a string</h3>
+        <pre>
+    package String01;
+    
+    public class _13_Frequency_of_String {
+    
+        public static void main(String[] args) {
+            String s = "anagram";
+    
+            int[] arr = new int[128];
+    
+            for (int i = 0; i < s.length(); i++) {
+                arr[s.charAt(i)]++;
+            }
+    
+            for (int i = 0; i < arr.length; i++) {
+                if (arr[i] > 0) { 
+                    System.out.println((char) i + " " + arr[i]);
+                }
+            }
+    
+        }
+    }
+    
+    // Output:
+    // a 3
+    // n 1
+    // g 1
+    // r 1
+    // m 1
+        </pre>
+    </div>
+
+
+    <div id="program14" class="section">
+        <h3>14. Find the frequency of each character in a character array</h3>
+        <pre>
+    package String01;
+    
+    public class _14_Character_Frequency_in_char_Array {
+    
+        public static void main(String[] args) {
+    
+            char[] ch1 = { 'P', 'r', 'O', 'g', 'R', 'A', 'M', 'M', 'I', 'n', 'G' };
+    
+            int[] arr = new int[128];
+    
+            // char to String
+    
+            String s = new String(ch1);
+    
+            for (int i = 0; i < s.length(); i++) {
+                char ch = s.charAt(i);
+                arr[ch]++; // store
+            }
+    
+            for (int i = 0; i < arr.length; i++) {
+                if (arr[i] != 0) {
+                    System.out.println((char) i + "  " + arr[i]);
+                }
+            }
+    
+        }
+    }
+    
+    // Output:
+    // P 1
+    // r 1
+    // O 1
+    // g 1
+    // R 2
+    // A 1
+    // M 2
+    // I 1
+    // n 1
+    // G 1
+        </pre>
+    </div>
+    
+<div id="program15" class="section">
+    <h3>15. Find the frequency of each uppercase character in a string</h3>
+    <pre>
+package Frequency;
+
+public class _15_UpperCase_Frequency_in_String {
+
+    public static void main(String[] args) {
+
+        String s = "www.PROgRaMMInG@GmAIl.CoM".replaceAll("[^A-Z]", "");
+
+        int[] arr = new int[128];
+
+        for (int i = 0; i < s.length(); i++) {
+            char ch = s.charAt(i);
+            arr[ch]++;
+        }
+
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] != 0) {
+                System.out.println((char) i + " " + arr[i]);
+            }
+        }
+
+    }
+}
+
+// Output:
+// P 1
+// R 2
+// M 2
+// G 1
+// A 1
+// I 1
+// C 1
+    </pre>
+</div>
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
