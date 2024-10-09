@@ -1,0 +1,1827 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Programs - Arrays - ArrayList</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h2{
+            text-align: center;
+        }
+
+        h2,
+        h3 {
+            color: #333;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        li {
+            margin: 10px 0;
+        }
+
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        pre {
+            background-color: #e8e8e8;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        .section {
+            margin-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Java Programs - Arrays - ArrayList</h2>
+    <ul>
+        <li><a href="#program1">_01_static_Array.java</a></li>
+        <li><a href="#program2">_02_Dynamic_Array.java</a></li>
+        <li><a href="#program3">_03_Sum_of_even_index_array.java</a></li>
+        <li><a href="#program4">_04_Reverse_array_sum_of_even_index_value.java</a></li>
+        <li><a href="#program5">_05_Sort_array.java</a></li>
+        <li><a href="#program6">_06_Find_elements_in_Array_BinarySearch.java</a></li>
+        <li><a href="#program7">_07_Linear_Search.java</a></li>
+        <li><a href="#program8">_08_Print_Zero_First_and_Last.java</a></li>
+        <li><a href="#program9">_09_Bubble_Sort.java</a></li>
+        <li><a href="#program10">_10_Bubble_sort_in_ArrayList.java</a></li>
+        <li><a href="#program11">_11_Words_sorting_.java</a></li>
+        <li><a href="#program12">_12_InterSection_Of_2_array.java</a></li>
+        <li><a href="#program13">_13_Remove_Duplicates_in_array.java</a></li>
+        <li><a href="#program14">_14_Merge_Multiple_arrays_in_Single_Array.java</a></li>
+        <li><a href="#program15">_15_First_Character_Of_Each_word_Uppercase.java</a></li>
+        <li><a href="#program16">_16_Anagram.java</a></li>
+        <li><a href="#program17">_17_Panagram.java</a></li>
+        <li><a href="#program18">_18_Union_and_Intersection.java</a></li>
+        <li><a href="#program19">_19_Hello_Lol.java</a></li>
+        <li><a href="#program20">_20_Nth_Largest_Number.java</a></li>
+        <li><a href="#program21">_21_1st_Positive_Missing_number.java</a></li>
+        <li><a href="#program22">_22_All_Missing_Number_in_Array.java</a></li>
+        <li><a href="#program23">_23_Right_side_Rotation_array.java</a></li>
+        <li><a href="#program24">_24_Left_Side_Rotation_Array.java</a></li>
+        <li><a href="#program25">_25_InterSection_Of_3_Array.java</a></li>
+        <li><a href="#program26">_26_Unique_Numbers_In_array.java</a></li>
+        <li><a href="#program27">_27_Unique_character_in_Array.java</a></li>
+        <li><a href="#program28">_28_Nth_Max_Min_value_In_Array.java</a></li>
+        <li><a href="#program29">_29_Add_Two_unsorted_Array_and_Print_in_Ascending_Order.java</a></li>
+        <li><a href="#program30">_30_Count_the_Occurrence_of_Array.java</a></li>
+        <li><a href="#program31">_31_Permutation_Count_String_Array.java</a></li>
+        <li><a href="#program32">_32_Remove_Adjacent_words_in_Sentence.java</a></li>
+        <li><a href="#program33">_33_a3b2c4_aaa_bb_cccc.java</a></li>
+        <li><a href="#program34">_34_Frequency_of_each_words_in_Sentence.java</a></li>
+        <li><a href="#program35">_35_Frequency_of_Integer_array.java</a></li>
+        <li><a href="#program36">_36_Convert_Integer_to_Binary.java</a></li>
+        <li><a href="#program37">_37_Remove_Duplicates_words_in_sentence.java</a></li>
+        <li><a href="#program38">_38_print_even_odd_index_values_in_reverse_order.java</a></li>
+        <li><a href="#program39">_39_Sum_of_double_digits.java</a></li>
+        <li><a href="#program40">_40_character_occurrence_in_String.java</a></li>
+        <li><a href="#program41">_41_Biggest_element_in_given_Array.java</a></li>
+        <li><a href="#program42">_42_First_Biggest_and_Second_Biggest_element.java</a></li>
+    </ul>
+
+    <div id="program1" class="section">
+        <h3>_01_static_Array.java</h3>
+        <pre>
+package _apple;
+
+public class _01_static_Array {
+    public static void main(String[] args) {
+        int[] arr = {1,2,3,4,5,6,7};
+        for (int i = 0; i < arr.length; i++) {
+            System.out.println(arr[i]);
+        }
+    }
+}
+        </pre>
+    </div>
+
+    <div id="program2" class="section">
+        <h3>_02_Dynamic_Array.java</h3>
+        <pre>
+package _apple;
+
+import java.util.Scanner;
+
+public class _02_Dynamic_Array {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the size : ");
+        int size = sc.nextInt();
+        int[] arr = new int[size];
+
+        System.out.println("Enter the elements : ");
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
+        }
+    }
+}
+        </pre>
+    </div>
+
+    <div id="program3" class="section">
+        <h3>_03_Sum_of_even_index_array.java</h3>
+        <pre>
+package _apple;
+
+public class _03_Sum_of_even_index_array {
+
+    public static void main(String[] args) {
+        int[] arr = {1,2,3,4,5}; 
+        int sum = 0;
+
+        for (int i = 0; i < arr.length; i++) {
+            if(i % 2 == 0) {
+                sum += arr[i];
+            }
+        }
+        System.out.println(sum);
+    }
+}
+        </pre>
+    </div>
+
+    <div id="program4" class="section">
+        <h3>_04_Reverse_array_sum_of_even_index_value.java</h3>
+        <pre>
+package _apple;
+
+public class _04_Reverse_array_sum_of_even_index_value {
+
+    public static void main(String[] args) {
+        int[] arr = { 1, 2, 3, 4, 5 }; 
+        int j = 0, sum = 0;
+        int[] arr1 = new int[arr.length];
+
+        for (int i = 0; i < arr1.length; i++) {
+            arr1[j++] = arr[i];
+        }
+
+        for (int i = arr1.length - 1; i >= 0; i--) {
+            if (i % 2 == 0) {
+                sum += arr1[i];
+            }
+        }
+
+        System.out.println(sum);
+    }
+}
+        </pre>
+    </div>
+
+    <div id="program5" class="section">
+        <h3>_05_Sort_array.java</h3>
+        <pre>
+package _apple;
+
+import java.util.Arrays;
+
+public class _05_Sort_array {
+
+    public static void main(String[] args) {
+        int[] arr = { 5, 3, 2, 6, 1, 4 };
+        Arrays.sort(arr);
+
+        for (int no : arr) {
+            System.out.print(no + " ");
+        }
+    }
+}
+        </pre>
+    </div>
+
+    <div id="program6" class="section">
+        <h3>_06_Find_elements_in_Array_BinarySearch.java</h3>
+        <pre>
+    package _apple;
+    
+    import java.util.Arrays;
+    
+    public class _06_Find_elements_in_Array_BinarySearch {
+        public static void main(String[] args) {
+            int[] arr = {1, 2, 3, 4, 5, 6};
+            int no = 3;
+            System.out.println(Arrays.binarySearch(arr, no) + " index");
+        }
+    }
+        </pre>
+    </div>
+
+    <div id="program7" class="section">
+        <h3>_07_Linear_Search.java</h3>
+        <pre>
+    package _apple;
+    
+    public class _07_Linear_Search {
+    
+        public static void main(String[] args) {
+            int[] arr = {10, 20, 30, 40, 50};
+            int no = 30;
+            linearSearch(arr, no);
+        }
+    
+        static void linearSearch(int[] arr, int no) {
+            for (int i = 0; i < arr.length; i++) {
+                if (arr[i] == no) {
+                    System.out.println("The value present in the index of : " + i);
+                    return;
+                }
+            }
+            System.out.println("The value is not present in the array");
+        }
+    }
+        </pre>
+    </div>
+
+    <div id="program8" class="section">
+        <h3>_08_Print_Zero_First_and_Last.java</h3>
+        <pre>
+    package _apple;
+    
+    import java.util.Arrays;
+    
+    public class _08_Print_Zero_First_and_Last {
+    
+        static void zeroFirst(int[] arr) {
+            Arrays.sort(arr);
+            for (int i = 0; i < arr.length; i++) {
+                System.out.print(arr[i] + " ");
+            }
+        }
+    
+        static void zeroLast(int[] arr) {
+            int j = 0;
+            int[] a1 = new int[arr.length];
+            for (int i = 0; i < arr.length; i++) {
+                if (arr[i] != 0) {
+                    a1[j++] = arr[i];
+                }
+            }
+            for (int no : a1) {
+                System.out.print(no + " ");
+            }
+        }
+    
+        public static void main(String[] args) {
+            int[] arr = {1, 3, 2, 0, 0, 4, 0, 5};
+            zeroFirst(arr);
+            System.out.println();
+            zeroLast(arr);
+        }
+    }
+        </pre>
+    </div>
+
+    <div id="program9" class="section">
+        <h3>_09_Bubble_Sort.java</h3>
+        <pre>
+    package _apple;
+    
+    public class _09_Bubble_Sort {
+    
+        public static void main(String[] args) {
+            int[] arr = {5, 3, 4, 1, 2};
+    
+            for (int i = 0; i < arr.length; i++) {
+                for (int j = 0; j < arr.length - 1 - i; j++) {
+                    if (arr[j] > arr[j + 1]) {
+                        int temp = arr[j];
+                        arr[j] = arr[j + 1];
+                        arr[j + 1] = temp;
+                    }
+                }
+            }
+    
+            for (int no : arr) {
+                System.out.print(no + " ");
+            }
+        }
+    }
+        </pre>
+    </div>
+
+    <div id="program10" class="section">
+        <h3>_10_Bubble_sort_in_ArrayList.java</h3>
+        <pre>
+    package _apple;
+    
+    import java.util.ArrayList;
+    import java.util.Arrays;
+    
+    public class _10_Bubble_sort_in_ArrayList {
+    
+        public static void main(String[] args) {
+            ArrayList<Integer> a1 = new ArrayList<Integer>(Arrays.asList(1, 4, 2, 3, 5));
+    
+            for (int i = 0; i < a1.size(); i++) {
+                for (int j = 0; j < a1.size() - 1 - i; j++) {
+                    if (a1.get(j) > a1.get(j + 1)) {
+                        int temp = a1.get(j);
+                        a1.set(j, a1.get(j + 1));
+                        a1.set(j + 1, temp);
+                    }
+                }
+            }
+    
+            System.out.println(a1); // [1, 2, 3, 4, 5]
+        }
+    }
+        </pre>
+    </div>
+
+    <div id="program11" class="section">
+        <h3>_11_Words_sorting_.java</h3>
+        <pre>
+    package _apple;
+    
+    public class _11_Words_sorting_ {
+    
+        public static void main(String[] args) {
+            String[] arr = {"cat", "bat", "ant"};
+    
+            for (int i = 0; i < arr.length; i++) {
+                for (int j = 0; j < arr.length - 1 - i; j++) {
+                    if (arr[j].compareTo(arr[j + 1]) > 0) {
+                        String temp = arr[j];
+                        arr[j] = arr[j + 1];
+                        arr[j + 1] = temp;
+                    }
+                }
+            }
+    
+            for (String str : arr) {
+                System.out.print(str + " ");
+            }
+        }
+    }
+        </pre>
+    </div>
+
+    <div id="program12" class="section">
+        <h3>_12_InterSection_Of_2_array.java</h3>
+        <pre>
+    package _apple;
+    
+    import java.util.ArrayList;
+    import java.util.Arrays;
+    
+    public class _12_InterSection_Of_2_array {
+    
+        public static void main(String[] args) {
+            ArrayList<Integer> a1 = new ArrayList<Integer>(Arrays.asList(1, 2, 3, 5, 6));
+            ArrayList<Integer> a2 = new ArrayList<Integer>(Arrays.asList(4, 7, 8, 3, 1));
+    
+            a1.retainAll(a2);
+    
+            System.out.println(a1);
+        }
+    }
+        </pre>
+    </div>
+
+    <div id="program13" class="section">
+        <h3>_13_Remove_Duplicates_in_array.java</h3>
+        <pre>
+    package _apple;
+    
+    import java.util.TreeSet;
+    
+    public class _13_Remove_Duplicates_in_array {
+    
+        public static void main(String[] args) {
+            int[] arr = {1, 2, 3, 3, 2, 4, 5, 5, 4, 5};
+    
+            TreeSet<Integer> t1 = new TreeSet<Integer>();
+    
+            for (int no : arr) {
+                t1.add(no);
+            }
+    
+            System.out.println(t1);
+        }
+    }
+        </pre>
+    </div>
+
+    <div id="program14" class="section">
+        <h3>_14_Merge_Multiple_arrays_in_Single_Array.java</h3>
+        <pre>
+    package _apple;
+    
+    public class _14_Merge_Multiple_arrays_in_Single_Array {
+    
+        static void merge(int[] a1, int[] a2) {
+            int[] temp = new int[a1.length + a2.length];
+            int j = 0;
+    
+            for (int i = 0; i < a1.length; i++) {
+                temp[j++] = a1[i];
+            }
+    
+            for (int i = 0; i < a2.length; i++) {
+                temp[j++] = a2[i];
+            }
+    
+            for (int no : temp) {
+                System.out.print(no + " ");
+            }
+        }
+    
+        public static void main(String[] args) {
+            int[] a1 = {1, 2, 3, 4};
+            int[] a2 = {5, 6, 7, 8, 9};
+    
+            int[] temp = new int[a1.length + a2.length];
+            System.arraycopy(a1, 0, temp, 0, a1.length);
+            System.arraycopy(a2, 0, temp, a1.length, a2.length);
+    
+            for (int no : temp) {
+                System.out.print(no + " ");
+            }
+    
+            System.out.println("\n another way");
+            merge(a1, a2);
+        }
+    }
+        </pre>
+    </div>
+
+    <div id="program15" class="section">
+        <h3>_15_First_Character_Of_Each_word_Uppercase.java</h3>
+        <pre>
+    package _apple;
+    
+    public class _15_First_Character_Of_Each_word_Uppercase {
+    
+        public static void main(String[] args) {
+            String str = "Java is a programming language";
+            String s[] = str.split(" ");
+            String res = "";
+    
+            for (int i = 0; i < s.length; i++) {
+                String a = s[i].substring(0, 1).toUpperCase();
+                String b = s[i].substring(1);
+                res += a + b + " ";
+            }
+    
+            System.out.println(res);
+        }
+    }
+        </pre>
+    </div>
+    <div id="program16" class="section">
+        <h3>_16_Anagram.java</h3>
+        <pre>
+            // Copy the program for checking if two strings are anagrams.
+            package _apple;
+
+import java.util.Arrays;
+
+public class _16_Anagram {
+
+	public static void main(String[] args) {
+
+		String s1 = "race", s2 = "care";
+
+		if (s1.length() == s2.length()) {
+
+			char[] ch1 = s1.toCharArray();
+			char[] ch2 = s2.toCharArray();
+
+			Arrays.sort(ch1);
+			Arrays.sort(ch2);
+
+			if (Arrays.equals(ch1, ch2)) {
+				System.out.println("Anagram");
+			}
+		}
+
+		else {
+			System.out.println("Not an anagram");
+		}
+	}
+}
+
+        </pre>
+    </div>
+
+    <div id="program17" class="section">
+        <h3>_17_Panagram.java</h3>
+        <pre>
+package _apple;
+
+import java.util.Set;
+import java.util.TreeSet;
+
+// panagram
+
+public class _17_Panagram {
+
+	public static void main(String[] args) {
+
+		String str = "The quick brown fox jumps over the lazy dog";
+
+		str = str.toLowerCase().replaceAll(" ", "");
+
+		Set<Character> set = new TreeSet<Character>();
+
+		for (int i = 0; i < str.length(); i++) {
+			char ch = str.charAt(i);
+			set.add(ch);
+		}
+
+//		System.out.println(set);
+
+		if (set.size() == 26) {
+			System.out.println("Panagram");
+		} else {
+			System.out.println("not Panagram");
+		}
+	}
+
+}
+
+        </pre>
+    </div>
+
+    <div id="program18" class="section">
+        <h3>_18_Union_and_Intersection.java</h3>
+        <pre>
+ package _apple;
+
+// union and intersection
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
+
+public class _18_Union_and_Intersection {
+
+	public static void main(String[] args) {
+
+		ArrayList<Integer> arr1 = new ArrayList<Integer>(Arrays.asList(1, 2, 4, 5, 8));
+		ArrayList<Integer> arr2 = new ArrayList<Integer>(Arrays.asList(1, 6, 7, 4, 9, 3));
+
+		ArrayList<Integer> a1 = new ArrayList<Integer>(arr1);
+		a1.retainAll(arr2);
+
+		System.out.println(a1);
+
+		Set<Integer> a2 = new HashSet<Integer>(arr1);
+		a2.addAll(arr2);
+
+		System.out.println(a2);
+	}
+
+}
+
+           
+        </pre>
+    </div>
+
+    <div id="program19" class="section">
+        <h3>_19_Hello_Lol.java</h3>
+        <pre>
+           //don't know
+        </pre>
+    </div>
+
+    <div id="program20" class="section">
+        <h3>_20_Nth_Largest_Number.java</h3>
+        <pre>
+            package _apple;
+
+            import java.util.Arrays;
+            
+            public class _20_Nth_Largest_Number {
+                public static void main(String[] args) {
+            
+                    int[] a = { 4, 1, 6, 3, 2, 1, 5 };
+            
+                    int n = 3;
+            
+                    Arrays.sort(a);
+            
+                    System.out.println(a.length - n);
+                }
+            }
+            
+        </pre>
+    </div>
+
+    <div id="program21" class="section">
+        <h3>_21_1st_Positive_Missing_number.java</h3>
+        <pre>
+            package batman;
+            // first positive missing number
+            
+            public class _21_1st_Positive_Missing_number {
+            
+                public static void main(String[] args) {
+                    int[] arr = { 1, 2, 4, 5, 6, 7, 8, 9 };
+            
+                    int n = arr[arr.length - 1];
+                    
+            
+                    int exactSum = n * (n + 1) / 2;
+            
+                    int sum = 0;
+                    
+                    for(int no : arr) {
+                        sum += no;
+                    }
+                    
+                    System.out.println(exactSum-sum);
+                }
+            
+            }
+            
+        </pre>
+    </div>
+
+    <div id="program22" class="section">
+        <h3>_22_All_Missing_Number_in_Array.java</h3>
+        <pre>
+            package batman;
+
+            import java.util.TreeSet;
+            
+            // missing numbers in array
+            
+            public class _22_All_Missing_Number_in_Array {
+            
+                public static void main(String[] args) {
+            
+                    int[] arr = { 1, 3, 5, 9, 11, 15, 21, 30 };
+            
+                    int start = arr[0]; // 1
+                    int end = arr[arr.length - 1]; // 30
+            
+                    // add array values in treeSet
+            
+                    TreeSet<Integer> t1 = new TreeSet<Integer>();
+            
+                    for (int no : arr) {
+                        t1.add(no);
+                    }
+            
+            //		System.out.println(t1);
+            
+                    // print the missing number in treeSet
+                    for (int i = start; i <= end; i++) {
+                        if (!t1.contains(i)) {
+                            System.out.println(i);
+                        }
+                    }
+            
+                }
+            
+            }
+            
+        </pre>
+    </div>
+
+    <div id="program23" class="section">
+        <h3>_23_Right_side_Rotation_array.java</h3>
+        <pre>
+            package batman;
+
+            //Rotation of array - Right side
+            
+            public class _23_Right_side_Rotation_array {
+            
+                public static void main(String[] args) {
+            
+                    int[] arr = { 1, 2, 3, 4, 5 };
+            
+                    int k = 3;
+            
+                    k = k % arr.length;
+            
+                    for (int i = 0; i < arr.length; i++) {
+            
+                        if (i < k) {
+                            System.out.print(arr[arr.length + i - k] + " ");
+                        } else {
+                            System.out.print(arr[i - k] + " ");
+                        }
+            
+                    }
+                }
+            
+            }
+            
+        </pre>
+    </div>
+
+    <div id="program24" class="section">
+        <h3>_24_Left_Side_Rotation_Array.java</h3>
+        <pre>
+            package batman;
+
+            //Rotation of array - Left side
+            
+            public class _24_Left_Side_Rotation_Array {
+            
+                public static void main(String[] args) {
+            
+                    int[] arr = { 1, 2, 3, 4, 5 };
+            
+                    int k = 3;
+                    int j = 0;
+            
+                    k = k % arr.length;
+            
+                    for (int i = 0; i < arr.length; i++) {
+            
+                        if (k < arr.length) {
+                            System.out.print(arr[k] + " ");
+                            k++;
+                        } else {
+                            System.out.print(arr[j++] + " ");
+                        }
+            
+                    }
+                }
+            
+            }
+            
+        </pre>
+    </div>
+
+    <div id="program25" class="section">
+        <h3>_25_InterSection_Of_3_Array.java</h3>
+        <pre>
+            package batman;
+
+            import java.util.ArrayList;
+            import java.util.Arrays;
+            
+            // Intersection of 3 array elements
+            
+            public class _25_InterSection_Of_3_Array {
+            
+                // using ArrayList
+            
+                static void arrList() {
+                    ArrayList<Integer> a1 = new ArrayList<Integer>(Arrays.asList(1, 2, 3, 4, 5, 6));
+                    ArrayList<Integer> a2 = new ArrayList<Integer>(Arrays.asList(1, 7, 4, 8, 3, 9));
+                    ArrayList<Integer> a3 = new ArrayList<Integer>(Arrays.asList(7, 3, 9, 2, 8, 5));
+                    a1.retainAll(a2);
+                    System.out.println(a1);
+            
+                    a2.retainAll(a3);
+                    System.out.println(a2);
+                }
+            
+                public static void main(String[] args) {
+                    arrList();
+            
+                    int[] a1 = { 1, 2, 3, 4, 5, 6 };
+                    int[] a2 = { 1, 7, 4, 8, 3, 9 };
+                    int[] a3 = { 7, 3, 9, 2, 8, 5 };
+            
+                    // compare a1 and a2 using for loop
+            
+                    for (int i = 0; i < a1.length; i++) {
+                        for (int j = 0; j < a2.length; j++) {
+                            if (a1[i] == a2[j]) {
+                                System.out.print(a1[i] + " ");
+                            }
+                        }
+                    }
+                    System.out.println();
+                    // compare a2 and a3 using for loop
+            
+                    for (int i = 0; i < a2.length; i++) {
+                        for (int j = 0; j < a3.length; j++) {
+                            if (a2[i] == a3[j]) {
+                                System.out.print(a2[i] + " ");
+                            }
+                        }
+                    }
+            
+                }
+            
+            }
+            
+        </pre>
+    </div>
+
+    <div id="program26" class="section">
+        <h3>_26_Unique_Numbers_In_array.java</h3>
+        <pre>
+            package batman;
+
+            // print unique number in an array
+            
+            public class _26_Unique_Numbers_In_array {
+            
+                public static void main(String[] args) {
+            
+                    int[] arr = { 1, 2, 3, 4, 1, 5, 2, 6 };
+            
+                    for (int i = 0; i < arr.length; i++) {
+                        boolean flag = true;
+                        for (int j = 0; j < arr.length; j++) {
+                            if (i != j && arr[i] == arr[j]) {
+                                flag = false;
+                                break;
+                            }
+                        }
+            
+                        if (flag) {
+                            System.out.print(arr[i] + " ");
+                        }
+            
+                    }
+                }
+            
+            }
+                      
+        </pre>
+    </div>
+
+    <div id="program27" class="section">
+        <h3>_27_Unique_character_in_Array.java</h3>
+        <pre>
+            package batman;
+            // print unique character in array
+            
+            public class _27_Unique_character_in_Array {
+            
+                public static void main(String[] args) {
+            
+                    String s = "zzcyyaoot"; // cat
+            
+                    char[] ch1 = s.toCharArray();
+                    char[] ch2 = s.toCharArray();
+            
+                    for (int i = 0; i < ch1.length; i++) {
+            
+                        boolean flag = true;
+            
+                        for (int j = 0; j < ch2.length; j++) {
+            
+                            if (i != j && ch1[i] == ch2[j]) {
+                                flag = false;
+                                break;
+                            }
+                        }
+                        if (flag) {
+                            System.out.print(ch1[i]);
+                        }
+                    }
+            
+                }
+            }
+                    
+        </pre>
+    </div>
+
+    <div id="program28" class="section">
+        <h3>_28_Nth_Max_Min_value_In_Array.java</h3>
+        <pre>
+            package batman;
+
+            import java.util.Arrays;
+            
+            // find Nth max and min value in array
+            
+            public class _28_Nth_Max_Min_value_In_Array {
+            
+                public static void main(String[] args) {
+            
+                    int[] arr = { 1, 2, 3, 4, 5, 6 };
+                    
+                    int n = 3 ;
+                    
+                    Arrays.sort(arr);
+            
+                    int len = arr.length;
+                    
+                    System.out.println("Max : " + arr[len-n]);
+                    
+                    System.out.println("Min : "+ arr[n-1]);
+                    
+  
+                }
+            
+            }
+                      
+        </pre>
+    </div>
+
+    <div id="program29" class="section">
+        <h3>_29_Add_Two_unsorted_Array_and_Print_in_Ascending_Order.java</h3>
+        <pre>
+            package batman;
+
+            import java.util.Arrays;
+            
+            // Add two unsorted arrays in one array and print in ascending order
+            
+            public class _29_Add_Two_unsorted_Array_and_Print_in_Ascending_Order {
+            
+                public static void main(String[] args) {
+            
+                    int[] a1 = { 4, 2, 1, 3, 5 };
+                    int[] a2 = { 9, 7, 6, 8, 10 };
+            
+                    int temp[] = new int[a1.length + a2.length];
+                    int j = 0;
+            
+                    for (int i = 0; i < a1.length; i++) {
+                        temp[j++] = a1[i];
+                    }
+            
+                    for (int i = 0; i < a2.length; i++) {
+                        temp[j++] = a2[i];
+                    }
+            
+                    Arrays.sort(temp);
+            
+                    for (int no : temp) {
+                        System.out.print(no + " ");
+                    }
+            
+                }
+            
+            }
+                      
+        </pre>
+    </div>
+
+    <div id="program30" class="section">
+        <h3>_30_Count_the_Occurrence_of_Array.java</h3>
+        <pre>
+            package batman;
+
+            // Occurrence of an array 
+            
+            public class _30_Count_the_Occurrence_of_Array {
+            
+                public static void main(String[] args) {
+            
+                    int[] arr = { 1, 1, 2, 3, 4, 3, 2, 3, 4, 5 };
+            
+                    int x = 5;
+            
+                    int count = 0;
+            
+                    for (int no : arr) {
+                        if (x == no) {
+                            count++;
+                        }
+                    }
+                    System.out.println(count);
+                }
+            
+            }
+                      
+        </pre>
+    </div>
+
+    <div id="program31" class="section">
+        <h3>_31_Permutation_Count_String_Array.java</h3>
+        <pre>
+            package batman;
+
+            // find the maximum permutation count in String array
+            
+            import java.util.ArrayList;
+            import java.util.Collections;
+            
+            public class _31_Permutation_Count_String_Array {
+            
+                public static void main(String[] args) {
+            
+                    String[] s = { "hello", "ccbc", "aacioeu" };
+            
+                    System.out.println(maxPermutation(s));
+                }
+            
+                // maxPermutation
+            
+                static int maxPermutation(String[] str) {
+                    ArrayList<Integer> a1 = new ArrayList<Integer>();
+            
+                    for (int i = 0; i < str.length; i++) {
+                        String s = str[i];
+            
+                        s = s.replaceAll("[aeiou]", "");
+            
+                        a1.add(fact(s.length()));
+                    }
+            
+                    Collections.sort(a1);
+            
+                    return a1.get(a1.size() - 1);
+                }
+            
+                // factorial of each String 
+                static int fact(int no) {
+                    int fact = 1;
+            
+                    for (int i = 1; i <= no; i++) {
+                        fact *= i;
+                    }
+                    return fact;
+                }
+            
+            }
+                      
+        </pre>
+    </div>
+
+    <div id="program32" class="section">
+        <h3>_32_Remove_Adjacent_words_in_Sentence.java</h3>
+        <pre>
+            package batman;
+
+            // Remove adjacent words in given sentence
+            
+            public class _32_Remove_Adjacent_words_in_Sentence {
+            
+                public static void main(String[] args) {
+                    String str = "hi hi hi how hi are are you you";
+            
+                    String[] s1 = str.split(" ");
+            
+                    for (int i = 0; i < s1.length - 1; i++) {
+                        if (compare(s1[i], s1[i + 1])) {
+                            System.out.print(s1[i] + " ");
+                        }
+                    }
+                    System.out.print(s1[s1.length - 1]);
+                }
+            
+                static boolean compare(String s1, String s2) {
+            
+                    return !s1.equals(s2);
+            
+            //		if (s1.equals(s2)) {
+            //			return false;
+            //		} else {
+            //			return true;
+            //		}
+            
+                }
+            
+            }
+                      
+        </pre>
+    </div>
+
+    <div id="program33" class="section">
+        <h3>_33_a3b2c4_aaa_bb_cccc.java</h3>
+        <pre>
+            package batman;
+
+            // a3b2c4 --> aaa bb cccc
+            public class _33_a3b2c4_aaa_bb_cccc {
+            
+                public static void main(String[] args) {
+            
+                    String s = "a3b2c4";
+            
+                    for (int i = 0; i < s.length(); i = i + 2) {
+                        print(s.charAt(i), s.charAt(i + 1));
+                    }
+                }
+            
+                static void print(char ch1, char ch2) {
+            
+                    int no = (int) (ch2 - 48);
+            
+                    for (int i = 1; i <= no; i++) {
+                        System.out.print(ch1);
+                    }
+                }
+            }
+                      
+        </pre>
+    </div>
+
+    <div id="program34" class="section">
+        <h3>_34_Frequency_of_each_words_in_Sentence.java</h3>
+        <pre>
+            package batman;
+
+            import java.util.HashMap;
+            import java.util.Map;
+            
+            //Frequency of each words in String array sentence
+            
+            public class _34_Frequency_of_each_words_in_Sentence {
+            
+                public static void main(String[] args) {
+            
+                    String str = "hi hello how how hi are are you";
+            
+                    String[] s1 = str.split(" ");
+            
+                    Map<String, Integer> map = new HashMap<String, Integer>();
+            
+                    for (String s : s1) {
+            
+                        // map.put(s, map.getOrDefault(s, 0)+1); use this for if else 
+                        if (map.containsKey(s)) {
+                            map.put(s, map.get(s) + 1);
+            //				
+                        } else {
+                            map.put(s, 1);
+                        }
+                    }
+            
+                    // to print
+            
+                    for (Map.Entry<String, Integer> m : map.entrySet()) {
+                        System.out.println(m.getKey() + " " + m.getValue());
+                    }
+                }
+            
+            }
+                      
+        </pre>
+    </div>
+
+    <div id="program35" class="section">
+        <h3>_35_Frequency_of_Integer_array.java</h3>
+        <pre>
+            package batman;
+
+            import java.util.HashMap;
+            import java.util.Map;
+            
+            // Frequency of Integer array
+            
+            public class _35_Frequency_of_Integer_array {
+            
+                public static void main(String[] args) {
+            
+                    int[] arr = { 1, 1, 2, 2, 2, 3, 3, 4, 5, 6, 7, 7, 7, 7, 8, 8, 8, 8, 9, 9, 9, 10 };
+            
+                    Map<Integer, Integer> map = new HashMap<Integer, Integer>();
+            
+                    for (int no : arr) {
+                        map.put(no, map.getOrDefault(no, 0) + 1);
+                    }
+            
+                    // print
+            
+                    for (Map.Entry<Integer, Integer> m : map.entrySet()) {
+                        System.out.println(m.getKey() + " --> " + m.getValue() + " times");
+                    }
+                }
+            
+            }
+                      
+        </pre>
+    </div>
+
+    <div id="program36" class="section">
+        <h3>_36_Convert_Integer_to_Binary.java</h3>
+        <pre>
+            package batman;
+
+            // convert integer to binary value
+            
+            public class _36_Convert_Integer_to_Binary {
+            
+                public static void main(String[] args) {
+            
+                    int no = 4;
+            
+                    String str = "";
+            
+                    while (no > 0) {
+                        int rem = no % 2;
+            
+                        str = rem + str;
+            
+                        no /= 2;
+                    }
+            
+                    System.out.println(str);
+                }
+            
+            }
+                      
+        </pre>
+    </div>
+
+    <div id="program37" class="section">
+        <h3>_37_Remove_Duplicates_words_in_sentence.java</h3>
+        <pre>
+            package batman;
+
+            import java.util.TreeSet;
+            
+            public class _37_Remove_Duplicates_words_in_sentence {
+            
+                public static void main(String[] args) {
+            
+                    String str = "hi hi how how are are are you you";
+            
+                    String[] s = str.split(" ");
+            
+                    TreeSet<String> t1 = new TreeSet<String>();
+            
+                    for (String s1 : s) {
+                        t1.add(s1);
+                    }
+            
+                    System.out.println(t1);
+                }
+            
+            }
+                      
+        </pre>
+    </div>
+
+    <div id="program38" class="section">
+        <h3>_38_print_even_odd_index_values_in_reverse_order.java</h3>
+        <pre>
+            package batman;
+
+            /*
+             *  i / p  :  1,2,3,4,5  
+             * 	o / p  :  5,3,1
+             */
+            
+            public class _38_print_even_odd_index_values_in_reverse_order {
+            
+                public static void main(String[] args) {
+            
+                    int[] arr = { 1, 2, 3, 4, 5 };
+            
+                    for (int i = arr.length - 1; i >= 0; i--) {
+                        if (i % 2 == 0) {
+                            System.out.print(arr[i] + " "); // 5 3 1
+                        }
+                    }
+            
+            // -----------------------------------------------------
+                    System.out.println();
+            //--------------------------------------------------------
+            
+                    // print_odd_index_values_in_reverse_order
+            
+                    int[] a1 = { 1, 2, 3, 4, 5, 6 };
+            
+                    for (int i = a1.length - 1; i >= 0; i--) {
+                        if (i % 2 != 0) {
+                            System.out.print(a1[i] + " "); // 6 4 2
+                        }
+                    }
+            
+                }
+            
+            }
+                      
+        </pre>
+    </div>
+
+    <div id="program39" class="section">
+        <h3>_39_Sum_of_double_digits.java</h3>
+        <pre>
+            package batman;
+
+            // sum of double digits in array
+            
+            public class _39_Sum_of_double_digits {
+            
+                public static void main(String[] args) {
+            
+                    int[] arr = { 10, 1, 20, 4, 2, 456, 1234, 10, 20, 444, 2, 10 };
+                    // 10, 20 ,10 , 20, 10 == 70
+            
+                    int sum = 0;
+            
+                    for (int i = 0; i < arr.length; i++) {
+            
+                        if (arr[i] > 9 && arr[i] < 100) {
+                            sum += arr[i];
+                        }
+                    }
+                    System.out.println(sum); // 70
+                }
+            
+            }
+                      
+        </pre>
+    </div>
+
+    <div id="program40" class="section">
+        <h3>_40_character_occurrence_in_String.java</h3>
+        <pre>
+            package batman;
+
+            // find the character occurrence in a given string
+            
+            public class _40_character_occurrence_in_String {
+            
+                public static void main(String[] args) {
+            
+                    String str = "hi how hello happy";
+            
+                    int count = 0;
+            
+                    String s1 = str.replaceAll("[^h]", ""); // hhhh
+            
+                    for (int i = 0; i < s1.length(); i++) {
+                        count++;
+                    }
+                    System.out.println(count);  // 4
+            
+                    // another way to find occurrence
+            
+                    char ch = 'h';
+                    int count1 = 0;
+            
+                    for (int i = 0; i < str.length(); i++) {
+                        char ch1 = str.charAt(i);
+                        if (ch1 == ch) {
+                            count1++;
+                        }
+                    }
+                    System.out.println(ch + " presents " + count1 + " times");
+            
+                    
+                    
+                }
+            
+            }
+                       
+        </pre>
+    </div>
+
+    <div id="program41" class="section">
+        <h3>_41_Biggest_element_in_given_Array.java</h3>
+        <pre>
+            package cat;
+
+            // find the biggest number in given array without sorting 
+            
+            public class _41_Biggest_element_in_given_Array {
+            
+                public static void main(String[] args) {
+            
+                    int[] arr = { 20, 98, 34, 2, 13, 12, 5, 88 };
+                    
+                    int max = 0 ;
+                    
+                    for (int i = 0; i < arr.length; i++) {
+                        if(arr[i] > max) {
+                            max = arr[i] ;
+                        }
+                    }
+                    System.out.println(max);  // 98
+            
+                }
+            
+            }
+                       
+        </pre>
+    </div>
+
+    <div id="program42" class="section">
+        <h3>_42_First_Biggest_and_Second_Biggest_element.java</h3>
+        <pre>
+            package cat;
+
+            // find the first biggest and second biggest element in a given array
+            
+            public class _41_First_Biggest_and_Second_Biggest_element {
+            
+                public static void main(String[] args) {
+            
+                    int[] arr = { 20, 98, 34, 2, 13, 12, 5, 88 };
+            
+                    int max1 = 0;
+                    int max2 = 0;
+            
+                    for (int i = 0; i < arr.length; i++) {
+                        if (arr[i] > max1) {
+                            max1 = arr[i];
+                        }
+                    }
+            
+                    System.out.println("First biggest : " + max1);
+            
+                    for (int i = 0; i < arr.length; i++) {
+                        if (arr[i] < max1 && arr[i] > max2) {
+                            max2 = arr[i];
+                        }
+                    }
+            
+                    System.out.println("Second biggest : " + max2);
+                }
+            
+            }
+                      
+        </pre>
+    </div>
+
+    <div id="program43" class="section">
+        <h3>_43_Patterns.java</h3>
+        <pre>
+            package Pattern;
+
+            public class Patterns {
+            
+                public static void main(String[] args) {
+            
+                    int no = 5;
+            
+                    //-------------------------------------------------------------------    
+                    System.out.println(1);
+                    //-------------------------------------------------------------------    
+            
+                    for (int row = 1; row <= no; row++) {
+                        for (int col = 1; col <= no; col++) {
+                            if (row >= col) {
+                                System.out.print("*");
+                            } else {
+                                System.out.print(" ");
+                            }
+                        }
+                        System.out.println();
+                    }
+            
+                    // Output:
+                    // *
+                    // **
+                    // ***
+                    // ****
+                    // *****
+                    
+                    //-------------------------------------------------------------------    
+                    System.out.println(2);
+                    //-------------------------------------------------------------------
+            
+                    for (int row = 1; row <= no; row++) {
+                        for (int col = 1; col <= no; col++) {
+                            if (row <= col) {
+                                System.out.print("*");
+                            } else {
+                                System.out.print(" ");
+                            }
+                        }
+                        System.out.println();
+                    }
+            
+                    // Output:
+                    // *****
+                    //  ****
+                    //   ***
+                    //    **
+                    //     *        
+            
+                    //-------------------------------------------------------------------    
+                    System.out.println(3);
+                    //-------------------------------------------------------------------    
+            
+                    for (int row = 1; row <= no; row++) {
+                        for (int col = 1; col <= no; col++) {
+                            if (row <= col) {
+                                System.out.print("* ");
+                            } else {
+                                System.out.print(" ");
+                            }
+                        }
+                        System.out.println();
+                    }
+            
+                    // Output:
+                    // * * * * * 
+                    //  * * * * 
+                    //   * * * 
+                    //    * * 
+                    //     * 
+            
+                    //-------------------------------------------------------------------    
+                    System.out.println(4);
+                    //-------------------------------------------------------------------    
+            
+                    for (int row = 1; row <= no; row++) {
+                        for (int col = no; col >= 1; col--) {
+                            if (row >= col) {
+                                System.out.print("*");
+                            } else {
+                                System.out.print(" ");
+                            }
+                        }
+                        System.out.println();
+                    }
+            
+                    // Output:
+                    //     *
+                    //    **
+                    //   ***
+                    //  ****
+                    // *****
+            
+                    //-------------------------------------------------------------------    
+                    System.out.println(5);
+                    //-------------------------------------------------------------------    
+            
+                    for (int row = 1; row <= no; row++) {
+                        for (int col = 1; col <= no; col++) {
+                            if (row <= col) {
+                                System.out.print("*");
+                            } else {
+                                System.out.print("");
+                            }
+                        }
+                        System.out.println();
+                    }
+            
+                    // Output:
+                    // *****
+                    // ****
+                    // ***
+                    // **
+                    // *
+            
+                    //-------------------------------------------------------------------    
+                    System.out.println(6);
+                    //-------------------------------------------------------------------    
+            
+                    for (int row = 1; row <= no; row++) {
+                        for (int col = no; col >= 1; col--) {
+                            if (row >= col) {
+                                System.out.print("* ");
+                            } else {
+                                System.out.print(" ");
+                            }
+                        }
+                        System.out.println();
+                    }
+            
+                    // Output:
+                    //     * 
+                    //    * * 
+                    //   * * * 
+                    //  * * * * 
+                    // * * * * * 
+            
+                    //-------------------------------------------------------------------    
+                    System.out.println(7);
+                    //-------------------------------------------------------------------
+            
+                    for (int row = 1; row <= no; row++) {
+                        for (int col = 1; col <= no; col++) {
+                            if (row >= col) {
+                                System.out.print("*");
+                            } else {
+                                System.out.print(" ");
+                            }
+                        }
+            
+                        for (int col = no; col >= 1; col--) {
+                            if (row >= col) {
+                                System.out.print("*");
+                            } else {
+                                System.out.print(" ");
+                            }
+                        }
+                        System.out.println();
+                    }
+            
+                    // Output:
+                    // *        *
+                    // **      **
+                    // ***    ***
+                    // ****  ****
+                    // **********
+            
+                    //-------------------------------------------------------------------    
+                    System.out.println(8);
+                    //-------------------------------------------------------------------
+                    
+                    for (int row = 1; row <= no; row++) {
+                        for (int col = 1; col <= no; col++) {
+                            if (row <= col) {
+                                System.out.print("*");
+                            } else {
+                                System.out.print("");
+                            }
+                        }
+            
+                        for (int col = 1; col <= no; col++) {
+                            if (row <= col) {
+                                System.out.print("*");
+                            } else {
+                                System.out.print("  ");
+                            }
+                        }
+                        System.out.println();
+                    }
+            
+                    // Output:
+                    // **********
+                    // ****  ****
+                    // ***    ***
+                    // **      **
+                    // *        *
+            
+                    //-------------------------------------------------------------------    
+                    System.out.println(9);
+                    //-------------------------------------------------------------------
+            
+                    for (int row = 1; row <= no; row++) {
+                        for (int col = 1; col <= no; col++) {
+                            if (row <= col) {
+                                System.out.print("*");
+                            } else {
+                                System.out.print("");
+                            }
+                        }
+                        System.out.println();
+                    }
+            
+                    for (int row = 1; row <= no; row++) {
+                        for (int col = 1; col <= no; col++) {
+                            if (row >= col) {
+                                System.out.print("*");
+                            } else {
+                                System.out.print(" ");
+                            }
+                        }
+                        System.out.println();
+                    }
+            
+                    // Output:
+                    // *****
+                    // ****
+                    // ***
+                    // **
+                    // *
+                    // *    
+                    // **   
+                    // ***  
+                    // **** 
+                    // *****
+            
+                    //-------------------------------------------------------------------    
+                    System.out.println(10);
+                    //-------------------------------------------------------------------
+            
+                    for (int row = 1; row <= no; row++) {
+                        for (int col = 1; col <= no; col++) {
+                            if (row <= col) {
+                                System.out.print("*");
+                            } else {
+                                System.out.print(" ");
+                            }
+                        }
+                        System.out.println();
+                    }
+            
+                    for (int row = 1; row <= no; row++) {
+                        for (int col = no; col >= 1; col--) {
+                            if (row >= col) {
+                                System.out.print("*");
+                            } else {
+                                System.out.print(" ");
+                            }
+                        }
+                        System.out.println();
+                    }
+            
+                    // Output:
+                    // *****
+                    //  ****
+                    //   ***
+                    //    **
+                    //     *
+                    //     *
+                    //    **
+                    //   ***
+                    //  ****
+                    // *****
+            
+                    //-------------------------------------------------------------------    
+                    System.out.println(11);
+                    //-------------------------------------------------------------------
+            
+                    for (int row = 1; row <= no; row++) {
+                        for (int col = 1; col <= no; col++) {
+                            if (row <= col) {
+                                System.out.print("* ");
+                            } else {
+                                System.out.print(" ");
+                            }
+                        }
+                        System.out.println();
+                    }
+            
+                    for (int row = 1; row <= no; row++) {
+                        for (int col = no; col >= 1; col--) {
+                            if (row >= col) {
+                                System.out.print("* ");
+                            } else {
+                                System.out.print(" ");
+                            }
+                        }
+                        System.out.println();
+                    }
+            
+                    // Output:
+                    // * * * * * 
+                    //  * * * * 
+                    //   * * * 
+                    //    * * 
+                    //     * 
+                    //     * 
+                    //    * * 
+                    //   * * * 
+                    //  * * * * 
+                    // * * * * * 
+            
+                    //-------------------------------------------------------------------    
+                    System.out.println(12);
+                    //-------------------------------------------------------------------
+            
+                    for (int row = 1; row <= no; row++) {
+                        for (int col = no; col >= 1; col--) {
+                            if (row >= col) {
+                                System.out.print("* ");
+                            } else {
+                                System.out.print(" ");
+                            }
+                        }
+                        System.out.println();
+                    }
+            
+                    for (int row = 1; row <= no; row++) {
+                        for (int col = 1; col <= no; col++) {
+                            if (row <= col) {
+                                System.out.print("* ");
+                            } else {
+                                System.out.print(" ");
+                            }
+                        }
+                        System.out.println();
+                    }
+            
+                    // Output:
+                    //     * 
+                    //    * * 
+                    //   * * * 
+                    //  * * * * 
+                    // * * * * * 
+                    // * * * * * 
+                    //  * * * * 
+                    //   * * * 
+                    //    * * 
+                    //     * 
+                }
+            }
+            
+
+        </pre>
+    </div>
+
+
+
+    <footer style="background-color: lightgrey; color: black; text-align: center; padding: 10px; font-size: 5px;">
+        <p>Follow me on <a href="https://github.com/yuke001" target="_blank" style="color: #0077cc;">GitHub</a></p>
+    </footer>
+
+
+
+
+
+
+
+</body>
+
+</html>
